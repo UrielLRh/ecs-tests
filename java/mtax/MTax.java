@@ -50,12 +50,13 @@ public class MTax implements Constant {
 
     public static List<String> validate(List<XTax> xTaxList) {
 
-        List<String> errorList = new ArrayList<>();
-        List<String> validIds = new ArrayList<>();
-
+        // Verificar que xTaxList tiene contenido
         if (xTaxList != null && xTaxList.size() > 0) {
-            getIds(xTaxList, errorList, validIds);
-            validateIds(xTaxList, errorList, validIds);
+            List<String> errorList = new ArrayList<>();
+            List<String> validIds = new ArrayList<>();
+
+            getIds(xTaxList, errorList, validIds); // Obtener ID's de las tax
+            validateIds(xTaxList, errorList, validIds); // Validar lista de tax
         }
 
         return errorList;
