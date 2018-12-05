@@ -3,8 +3,8 @@ import java.util.Date;
 import javax.persistence.Id;
 import javax.persistence.Version;
 
-public class X_Tax {
-    
+public class XTax {
+
     private Object id;
     private BigDecimal base;
     private String tax;
@@ -20,7 +20,7 @@ public class X_Tax {
     private Date updated;
     private String version;
 
-    public X_Tax() {
+    public XTax() {
     }
 
     public Object getId() {
@@ -78,7 +78,7 @@ public class X_Tax {
     public void setTrasladado(boolean trasladado) {
         this.trasladado = trasladado;
     }
-    
+
     public boolean isLocal() {
         return local;
     }
@@ -134,5 +134,5 @@ public class X_Tax {
     public void setVersion(String version) {
         this.version = version;
     }
-    
+
 }
